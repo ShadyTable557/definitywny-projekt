@@ -1,0 +1,1 @@
+WERSJA PYTHON 3.12.10!!!!!!
