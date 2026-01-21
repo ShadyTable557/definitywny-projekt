@@ -17,7 +17,6 @@ class OknoWykresu(QMainWindow):
         self.setWindowTitle(tytul)
         self.setGeometry(100, 100, 300, 200)
         
-        # Ustawienia Matplotlib
         self.figura = Figure(figsize=(3, 2), dpi=80)
         self.wykres = FigureCanvasQTAgg(self.figura)
         self.setCentralWidget(self.wykres)
@@ -25,8 +24,8 @@ class OknoWykresu(QMainWindow):
         self.os = self.figura.add_subplot(111)
         self.linia, = self.os.plot([], [])
         
-        self.os.set_ylim(0, max_y * 1.1) # Skala pionowa
-        self.os.set_xlim(0, 200)         # Skala pozioma (historia)
+        self.os.set_ylim(0, max_y * 1.1) 
+        self.os.set_xlim(0, 200)         
         self.os.grid(True)
 
     def odswiez_wykres(self, dane):
@@ -247,7 +246,7 @@ class Projekt(QMainWindow):
             okno.move(pos_x, pos_y)
             okno.show()
             self.lista_okien.append(okno)
-            pos_y += 230 # Przesuniecie kolejnego okna w dol
+            pos_y += 230 
 
 
     ###definiowanie interfejsu####
